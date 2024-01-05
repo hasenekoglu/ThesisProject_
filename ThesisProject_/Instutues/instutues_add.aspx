@@ -62,10 +62,14 @@
                         <div class="addInstutues">
                             <label for="Instutes Name"></label>
                             <asp:TextBox runat="server" ID="txtInstues" CssClass="form-control" placeHolder="Instutues" />  
-                            <asp:TextBox runat="server" ID="TextBox1" CssClass="form-control" placeHolder="UniversityID" /> 
+                         
+                            <asp:DropdownList runat ="server" CssClass ="form-control" ID ="TextBox1" AutoPostBack="true"></asp:DropdownList>
+                           
+                       
                         </div>
                           <asp:Button Text="Save" ID="btnSave" runat="server" CssClass="btn btn-success" OnClick="btnSave_Click" />
                           <a href="instutues_list.aspx" class="btn btn-danger">Cancel</a>
+                   
                     </form>
             </div>    
         </div>

@@ -57,7 +57,7 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <form id="form2" runat="server">
-                    <h3>Üniversite EKle</h3>
+                    <h3>Üniversite Ekle</h3>
                    <div class="form-group">
                        <h3>Add University</h3>
                        <label for="exampleInputEmail1" CssClass="baslık">University Name</label>

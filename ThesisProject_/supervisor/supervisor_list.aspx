@@ -64,7 +64,7 @@
                              <th>Id</th>
                              <th>Supervisor Name</th>
                              <th>Supervisor Lastname</th>
-                             <th>Supervisor Number</th>
+                         
                              <th>Supervisor Email</th>
                             </tr>
                             </thead>

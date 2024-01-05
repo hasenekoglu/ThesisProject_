@@ -5,20 +5,17 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ThesisProject_.thesis
+namespace ThesisProject_.userViews
 {
-    public partial class thesis_details : System.Web.UI.Page
+    public partial class user_thesis_list : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             ThesisProjectDataTableAdapters.THESISTableAdapter thesis = new ThesisProjectDataTableAdapters.THESISTableAdapter();
-           int id = Convert.ToInt32(Request.QueryString["id"]);
-            thesisList.DataSource = thesis.GEtThesis(id);
+            thesisList.DataSource = thesis.GetAllThesis();
             thesisList.DataBind();
-
-            // thesisList.DataSource = thesis.GetAllThesis();
-            // 
         }
+
         public string getAuthorName(int authorId)
         {
             ThesisProjectDataTableAdapters.AUTHORSTableAdapter author = new ThesisProjectDataTableAdapters.AUTHORSTableAdapter();
@@ -80,7 +77,7 @@ namespace ThesisProject_.thesis
             }
             catch
             {
-                universityName = "-";
+                universityName= "-";
             }
             return universityName;
         }

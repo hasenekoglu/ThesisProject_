@@ -11,7 +11,17 @@ namespace ThesisProject_.Instutues
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                ThesisProjectDataTableAdapters.UNIVERSITIESTableAdapter cities = new ThesisProjectDataTableAdapters.UNIVERSITIESTableAdapter();
+                TextBox1.Items.Clear();
+                TextBox1.Items.Add(new ListItem("Chooose Your City"));
+                TextBox1.AppendDataBoundItems = true;
+                TextBox1.DataSource = cities.GetAllUniversity();
+                TextBox1.DataTextField = "NAME";
+                TextBox1.DataValueField = "ID";
+                TextBox1.DataBind();
+            }
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
@@ -22,6 +32,8 @@ namespace ThesisProject_.Instutues
             instutues.InstutuesAdd(txtInstues.Text,ID);
       //buraya dropdown eklenecek 
             Response.Redirect("/Instutues/instutues_list.aspx");
+
+          
         }
     }
 }

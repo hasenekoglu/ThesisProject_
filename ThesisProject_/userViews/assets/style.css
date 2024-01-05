@@ -1,0 +1,78 @@
+﻿/* Navbar */
+.navbar {
+    height: 4rem;
+    width: 100%;
+    background-color: #ffd54f; /* Deeper black for contrast */
+    border-bottom: 2px solid #e67e22;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem; /* More padding for visual balance */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .navbar a {
+        color: #4c3e0d;
+        text-decoration: none;
+        font-weight: 500; /* Slightly bolder for clarity */
+        margin: 0 1.5rem; /* Wider spacing for readability */
+        transition: color 0.2s ease-in-out; /* Smoother hover effect */
+    }
+
+        .navbar a:hover {
+            color: #e67e22; /* Brand-complementary hover color */
+        }
+
+.navbar-title span {
+    font-size: 24px; /* Slightly smaller for visual harmony */
+    font-weight: 700; /* Bolder for emphasis */
+}
+
+    .navbar-title span:hover {
+        font-size: 30px; /* Reduced hover size for a less dramatic effect */
+    }
+
+.navbar-collapse {
+    /* Assuming buttons are within a "navbar-collapse" element */
+    display: flex;
+    justify-content: flex-end; /* Align elements to the right */
+}
+
+.nav-item a:hover {
+    background-color: rgba(255, 0, 0, 0.3); /* Increased opacity on hover */
+}
+
+/* Footer */
+.footer {
+    height: 6rem;
+    background-color: #5d4037;
+    padding: 1.5rem;
+    position: fixed; /* Fix the footer to the bottom */
+    bottom: 0; /* Position it at the bottom of the viewport */
+    width: 100%; /* Ensure it spans the full width */
+    left: 0; /* Ensure it starts from the left edge */
+    z-index: 999; /* Ensure it appears above other content */
+}
+
+.footer-links a {
+    margin: 0 1rem; /* Add spacing between links */
+    font-size: 18px;
+    color: #ffd54f;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+}
+
+    .footer-links a:hover {
+        color: #fff; /* White on hover for clarity */
+    }
+
+.footer-descriptions {
+    display: flex;
+    justify-content: center;
+}

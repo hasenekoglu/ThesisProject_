@@ -242,6 +242,15 @@
     <Content Include="university\university_delete.aspx" />
     <Content Include="university\university_edit.aspx" />
     <Content Include="university\university_list.aspx" />
+    <Content Include="userViews\assets\index.html" />
+    <Content Include="userViews\assets\style.css" />
+    <Content Include="userViews\user_author_list.aspx" />
+    <Content Include="userViews\user_cosupervisor_list.aspx" />
+    <Content Include="userViews\user_language_list.aspx" />
+    <Content Include="userViews\user_supervisor_list.aspx" />
+    <Content Include="userViews\user_thesis_list.aspx" />
+    <Content Include="userViews\user_types_list.aspx" />
+    <Content Include="userViews\user_university_list.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -519,6 +528,55 @@
     </Compile>
     <Compile Include="university\university_list.aspx.designer.cs">
       <DependentUpon>university_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userViews\user_author_list.aspx.cs">
+      <DependentUpon>user_author_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userViews\user_author_list.aspx.designer.cs">
+      <DependentUpon>user_author_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userViews\user_cosupervisor_list.aspx.cs">
+      <DependentUpon>user_cosupervisor_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userViews\user_cosupervisor_list.aspx.designer.cs">
+      <DependentUpon>user_cosupervisor_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userViews\user_language_list.aspx.cs">
+      <DependentUpon>user_language_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userViews\user_language_list.aspx.designer.cs">
+      <DependentUpon>user_language_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userViews\user_supervisor_list.aspx.cs">
+      <DependentUpon>user_supervisor_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userViews\user_supervisor_list.aspx.designer.cs">
+      <DependentUpon>user_supervisor_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userViews\user_thesis_list.aspx.cs">
+      <DependentUpon>user_thesis_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userViews\user_thesis_list.aspx.designer.cs">
+      <DependentUpon>user_thesis_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userViews\user_types_list.aspx.cs">
+      <DependentUpon>user_types_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userViews\user_types_list.aspx.designer.cs">
+      <DependentUpon>user_types_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userViews\user_university_list.aspx.cs">
+      <DependentUpon>user_university_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userViews\user_university_list.aspx.designer.cs">
+      <DependentUpon>user_university_list.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

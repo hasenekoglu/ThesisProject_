@@ -63,6 +63,7 @@
                      </div>
                     <asp:Button Text="Edit" ID="btnKaydet" runat="server" CssClass="btn btn-success" OnClick="btnKaydet_Click"/>
                     <a href="/Instutues/instutues_list.aspx" class="btn btn-danger">Cancel</a>
+
                     </form>
             </div>    
         </div>

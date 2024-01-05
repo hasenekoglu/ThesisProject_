@@ -11,7 +11,10 @@ namespace ThesisProject_.thesis
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            int id = Convert.ToInt32(Request.QueryString["id"]);
+            ThesisProjectDataTableAdapters.THESISTableAdapter thesis = new ThesisProjectDataTableAdapters.THESISTableAdapter();
+            thesis.ThesisDelete(id);
+            Response.Redirect("/thesis/thesis_list.aspx");
         }
     }
 }

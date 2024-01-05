@@ -61,11 +61,11 @@
             <div class="container-fluid">
                    <form id="form1" runat="server">
                        <div class="form-group" >
+                              <h3>Co-Supervisor Edit</h3>
                         <asp:TextBox runat="server" ID="txtCosupervisorName" CssClass="form-control" placeHolder="Cosupervisor Name" />                       
                         <label for="Cosupervisor LastName"></label>
                         <asp:TextBox runat="server" ID="txtCosupervisorSurname" CssClass="form-control" placeHolder="Cosupervisor Surname" />                      
-                        <label for="Cosupervisor Phone Number"></label>
-                        <asp:TextBox runat="server" ID="txtCosupervisorPhoneNumber" CssClass="form-control" placeHolder="Cosupervisor Phone Number" />                     
+                                      
                         <label for="Cosupervisor Email"></label>
                         <asp:TextBox runat="server" ID="txtCosupervisorEmail" CssClass="form-control" placeHolder="Email" />
                        </div>

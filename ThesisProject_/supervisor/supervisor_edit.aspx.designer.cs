@@ -42,15 +42,6 @@ namespace ThesisProject_.supervisor
         protected global::System.Web.UI.WebControls.TextBox txtSupervisorSurname;
 
         /// <summary>
-        /// txtSupervisorPhoneNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSupervisorPhoneNumber;
-
-        /// <summary>
         /// txtSupervisorEmail control.
         /// </summary>
         /// <remarks>

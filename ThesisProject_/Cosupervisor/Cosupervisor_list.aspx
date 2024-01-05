@@ -58,14 +58,14 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
               <form id="form1" runat="server">
-                  <h3>Co-supervisor List</h3>
+                  <h3>Co-Supervisor List</h3>
                      <table class="table table-bordered table-hover">
                              <thead>
                                 <tr>
-                                  <th>Co-supervisor Id</th>
+                                  <th>Co-Supervisor Id</th>
                                   <th>Name</th> 
                                   <th>Surname</th> 
-                                  <th>Number</th>
+                                 
                                   <th>Email</th>
                                   <th>Operations</th>
                                 </tr>

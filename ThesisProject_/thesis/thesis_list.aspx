@@ -80,7 +80,7 @@
                                 <asp:Repeater runat="server" ID="thesisList">
                                     <ItemTemplate>
                                       <tr>
-                                        <td><%# Eval("ID") %></td
+                                        <td><%# Eval("ID") %></td>
                                         <td><%# getAuthorName(Convert.ToInt32(Eval("AUTHORID"))) %></td>
                                         <td><%# getSupervisorName(Convert.ToInt32(Eval("SUPERVISORID"))) %></td>
                                         <td><%# getCoSupervisorName(Convert.ToInt32(Eval("COSUPERVISORID"))) %></td>
