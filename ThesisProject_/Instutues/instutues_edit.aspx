@@ -17,32 +17,38 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper" class="sidebarWrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Start Bootstrap
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Dashboard</a>
-                </li>
-                <li>
-                    <a href="#">Shortcuts</a>
-                </li>
-                <li>
-                    <a href="#">Overview</a>
-                </li>
-                <li>
-                    <a href="#">Events</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
+                                 <li class="sidebar-brand">
+    <a href="../thesis/thesis_list.aspx">
+    THESIS
+</a>
+ </li>
+ <li>
+     <a href ="../Author/author_list.aspx">Authors</a>
+ </li>
+ <li>
+     <a href="../city/city_list.aspx">Cities</a>
+ </li>
+ <li>
+     <a href="../Cosupervisor/Cosupervisor_list.aspx">Cosupervisors</a>
+ </li>
+ <li>
+     <a href ="../supervisor/supervisor_list.aspx">Supervisor</a>
+ </li>
+ <li>
+     <a href ="../Instutues/instutues_list.aspx">Instutes</a>
+ </li>
+ <li>
+     <a href ="../keywords/keywords_list.aspx">Keywords</a>
+ </li>
+ <li>
+     <a href ="../languages/languages_list.aspx">Language</a>
+ </li>
+ <li>
+     <a href ="../types/types_list.aspx">Types</a>
+ </li>
+ <li>
+     <a href ="../university/university_list.aspx">Universities</a>
+ </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->

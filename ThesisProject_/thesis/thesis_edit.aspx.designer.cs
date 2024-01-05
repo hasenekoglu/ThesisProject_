@@ -11,7 +11,7 @@ namespace ThesisProject_.thesis
 {
 
 
-    public partial class thesis_add
+    public partial class thesis_edit
     {
 
         /// <summary>

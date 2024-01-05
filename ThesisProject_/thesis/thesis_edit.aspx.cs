@@ -4,15 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using ThesisProject_.Author;
-using ThesisProject_.Cosupervisor;
-using ThesisProject_.instutues;
-using ThesisProject_.supervisor;
-using ThesisProject_.university;
 
 namespace ThesisProject_.thesis
 {
-    public partial class thesis_add : System.Web.UI.Page
+    public partial class thesis_edit : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -31,10 +26,10 @@ namespace ThesisProject_.thesis
                 ThesisProjectDataTableAdapters.THESISTableAdapter thesis = new ThesisProjectDataTableAdapters.THESISTableAdapter();
 
 
-               /* int id = Convert.ToInt32(Request.QueryString["id"]);
+                int id = Convert.ToInt32(Request.QueryString["id"]);
                 int pageNum = thesis.GEtThesis(id)[0].NUMBEROFPAGE;
                 string abs = thesis.GEtThesis(id)[0].ABSTRACT;
-                DateTime year = thesis.GEtThesis(id)[0].YEAR;*/
+                DateTime year = thesis.GEtThesis(id)[0].YEAR;
 
 
 
@@ -45,8 +40,8 @@ namespace ThesisProject_.thesis
                 authorList.AppendDataBoundItems = true;
                 authorList.DataTextField = "SURNAME";
                 authorList.DataValueField = "ID";
-                authorList.DataBind();
-                
+                authorList.DataBind(); 
+                authorList.SelectedIndex = 0;
 
 
 
@@ -58,7 +53,7 @@ namespace ThesisProject_.thesis
                 supervisorList.DataTextField = "SURNAME";
                 supervisorList.DataValueField = "ID";
                 supervisorList.DataBind();
-               
+                supervisorList.SelectedIndex = 0;
 
 
                 cosupervisorList.Items.Clear();
@@ -68,7 +63,7 @@ namespace ThesisProject_.thesis
                 cosupervisorList.DataTextField = "SURNAME";
                 cosupervisorList.DataValueField = "ID";
                 cosupervisorList.DataBind();
-                
+                cosupervisorList.SelectedIndex = 0;
 
 
                 universityList.Items.Clear();
@@ -78,7 +73,7 @@ namespace ThesisProject_.thesis
                 universityList.DataTextField = "NAME";
                 universityList.DataValueField = "ID";
                 universityList.DataBind();
-               
+                universityList.SelectedIndex = 0;
 
 
                 instutueList.Items.Clear();
@@ -88,7 +83,7 @@ namespace ThesisProject_.thesis
                 instutueList.DataTextField = "INSTUTUE";
                 instutueList.DataValueField = "ID";
                 instutueList.DataBind();
-             
+                instutueList.SelectedIndex = 0;
 
                 languageList.Items.Clear();
                 languageList.DataSource = language.GetAllLanguages();
@@ -97,7 +92,7 @@ namespace ThesisProject_.thesis
                 languageList.DataTextField = "LANGUAGE";
                 languageList.DataValueField = "ID";
                 languageList.DataBind();
-              
+                languageList.SelectedIndex = 0;
 
 
                 typeList.Items.Clear();
@@ -107,7 +102,7 @@ namespace ThesisProject_.thesis
                 typeList.DataTextField = "TYPE";
                 typeList.DataValueField = "ID";
                 typeList.DataBind();
-            
+                typeList.SelectedIndex = 0;
 
                 keywordList.Items.Clear();
                 keywordList.DataSource = keyword.GetAllKeywords();
@@ -116,14 +111,14 @@ namespace ThesisProject_.thesis
                 keywordList.DataTextField = "KEYWORDS_NAME";
                 keywordList.DataValueField = "ID";
                 keywordList.DataBind();
-             
+                keywordList.SelectedIndex = 0;
 
-             // string numPage = Convert.ToString(pageNum);
-             //   string loadedYear = Convert.ToString(year);
+                string numPage = Convert.ToString(pageNum);
+                string loadedYear = Convert.ToString(year);
 
-             //   txtPageNum.Text = numPage;
-              //  txtAbstract.Text = abs;
-               // txtYear.Text = loadedYear;
+                txtPageNum.Text = numPage;
+                txtAbstract.Text = abs;
+                txtYear.Text = loadedYear;
 
 
 
@@ -131,7 +126,7 @@ namespace ThesisProject_.thesis
 
 
 
-
+            
 
         }
 
@@ -139,20 +134,20 @@ namespace ThesisProject_.thesis
         {
             ThesisProjectDataTableAdapters.THESISTableAdapter thesis = new ThesisProjectDataTableAdapters.THESISTableAdapter();
             int thesisID = Convert.ToInt32(Request.QueryString["id"]);
-            int authorId = Convert.ToInt32(authorList.SelectedItem.Value);
-            int supervisorId = Convert.ToInt32(supervisorList.SelectedItem.Value);
-            int cosupervisorId = Convert.ToInt32(cosupervisorList.SelectedItem.Value);
-            int universityId = Convert.ToInt32(universityList.SelectedItem.Value);
-            int instutueId = Convert.ToInt32(instutueList.SelectedItem.Value);
-            int languageId = Convert.ToInt32(languageList.SelectedItem.Value);
+            int authorId = Convert.ToInt32(authorList.SelectedItem.Value); 
+            int supervisorId = Convert.ToInt32(supervisorList.SelectedItem.Value); 
+            int cosupervisorId = Convert.ToInt32(cosupervisorList.SelectedItem.Value); 
+            int universityId = Convert.ToInt32(universityList.SelectedItem.Value); 
+            int instutueId = Convert.ToInt32(instutueList.SelectedItem.Value); 
+            int languageId = Convert.ToInt32(languageList.SelectedItem.Value); 
             int typeId = Convert.ToInt32(typeList.SelectedItem.Value);
             int keywordId = Convert.ToInt32(keywordList.SelectedItem.Value);
             DateTime currentDateTime = DateTime.Now;
 
-            int PageNumber = Convert.ToInt32(txtPageNum.Text);
+           int PageNumber = Convert.ToInt32(txtPageNum.Text);
 
 
-            thesis.ThesisAdd(authorId, universityId, typeId, instutueId, languageId, supervisorId, cosupervisorId, PageNumber, txtAbstract.Text, txtYear.Text, currentDateTime, keywordId);
+            thesis.ThesisUpdate(authorId, universityId, typeId, instutueId, languageId, supervisorId,cosupervisorId, PageNumber, txtAbstract.Text, txtYear.Text, currentDateTime, keywordId,  thesisID);
             Response.Redirect("/thesis/thesis_list.aspx");
 
         }

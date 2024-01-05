@@ -232,6 +232,7 @@
     <Content Include="thesis\thesis_add.aspx" />
     <Content Include="thesis\thesis_delete.aspx" />
     <Content Include="thesis\thesis_details.aspx" />
+    <Content Include="thesis\thesis_edit.aspx" />
     <Content Include="thesis\thesis_list.aspx" />
     <Content Include="thesis\thesis_update.aspx" />
     <Content Include="types\types_add.aspx" />
@@ -420,6 +421,9 @@
     <Compile Include="supervisor\supervisor_list.aspx.designer.cs">
       <DependentUpon>supervisor_list.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ThesisProjectData.cs">
+      <DependentUpon>ThesisProjectData.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ThesisProjectData.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -445,6 +449,13 @@
     </Compile>
     <Compile Include="thesis\thesis_details.aspx.designer.cs">
       <DependentUpon>thesis_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="thesis\thesis_edit.aspx.cs">
+      <DependentUpon>thesis_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="thesis\thesis_edit.aspx.designer.cs">
+      <DependentUpon>thesis_edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="thesis\thesis_list.aspx.cs">
       <DependentUpon>thesis_list.aspx</DependentUpon>

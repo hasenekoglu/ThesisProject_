@@ -547,7 +547,7 @@ namespace ThesisProject_ {
                         this.tableKEYWORDSOFTHESIS.KEYWORDSIDColumn}, false);
             this.Relations.Add(this.relationFK_KEYWORDSOFTHESIS_KEYWORDS);
             this.relationFK_KEYWORDSOFTHESIS_THESIS = new global::System.Data.DataRelation("FK_KEYWORDSOFTHESIS_THESIS", new global::System.Data.DataColumn[] {
-                        this.tableTHESIS.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTHESIS.ID2Column}, new global::System.Data.DataColumn[] {
                         this.tableKEYWORDSOFTHESIS.THESISIDColumn}, false);
             this.Relations.Add(this.relationFK_KEYWORDSOFTHESIS_THESIS);
         }
@@ -2784,7 +2784,7 @@ namespace ThesisProject_ {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class THESISDataTable : global::System.Data.TypedTableBase<THESISRow> {
             
-            private global::System.Data.DataColumn columnID;
+            private global::System.Data.DataColumn columnID2;
             
             private global::System.Data.DataColumn columnAUTHORID;
             
@@ -2809,6 +2809,8 @@ namespace ThesisProject_ {
             private global::System.Data.DataColumn columnSUBMISSIN;
             
             private global::System.Data.DataColumn columnTITLEID;
+            
+            private global::System.Data.DataColumn columnID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -2845,9 +2847,9 @@ namespace ThesisProject_ {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
+            public global::System.Data.DataColumn ID2Column {
                 get {
-                    return this.columnID;
+                    return this.columnID2;
                 }
             }
             
@@ -2949,6 +2951,14 @@ namespace ThesisProject_ {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2999,7 +3009,8 @@ namespace ThesisProject_ {
                         ABSTRACT,
                         YEAR,
                         SUBMISSIN,
-                        TITLEID};
+                        TITLEID,
+                        null};
                 if ((parentAUTHORSRowByFK_THESIS_AUTHORS != null)) {
                     columnValuesArray[1] = parentAUTHORSRowByFK_THESIS_AUTHORS[0];
                 }
@@ -3028,9 +3039,9 @@ namespace ThesisProject_ {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public THESISRow FindByID(decimal ID) {
+            public THESISRow FindByID2(decimal ID2) {
                 return ((THESISRow)(this.Rows.Find(new object[] {
-                            ID})));
+                            ID2})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3050,7 +3061,7 @@ namespace ThesisProject_ {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnID = base.Columns["ID"];
+                this.columnID2 = base.Columns["ID2"];
                 this.columnAUTHORID = base.Columns["AUTHORID"];
                 this.columnUNIVERSITYID = base.Columns["UNIVERSITYID"];
                 this.columnTYPEID = base.Columns["TYPEID"];
@@ -3063,13 +3074,14 @@ namespace ThesisProject_ {
                 this.columnYEAR = base.Columns["YEAR"];
                 this.columnSUBMISSIN = base.Columns["SUBMISSIN"];
                 this.columnTITLEID = base.Columns["TITLEID"];
+                this.columnID = base.Columns["ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
+                this.columnID2 = new global::System.Data.DataColumn("ID2", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID2);
                 this.columnAUTHORID = new global::System.Data.DataColumn("AUTHORID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAUTHORID);
                 this.columnUNIVERSITYID = new global::System.Data.DataColumn("UNIVERSITYID", typeof(int), null, global::System.Data.MappingType.Element);
@@ -3094,14 +3106,18 @@ namespace ThesisProject_ {
                 base.Columns.Add(this.columnSUBMISSIN);
                 this.columnTITLEID = new global::System.Data.DataColumn("TITLEID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTITLEID);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
-                this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = -1;
-                this.columnID.AutoIncrementStep = -1;
-                this.columnID.AllowDBNull = false;
-                this.columnID.ReadOnly = true;
-                this.columnID.Unique = true;
+                                this.columnID2}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnID}, false));
+                this.columnID2.AutoIncrement = true;
+                this.columnID2.AutoIncrementSeed = -1;
+                this.columnID2.AutoIncrementStep = -1;
+                this.columnID2.AllowDBNull = false;
+                this.columnID2.ReadOnly = true;
+                this.columnID2.Unique = true;
                 this.columnAUTHORID.AllowDBNull = false;
                 this.columnUNIVERSITYID.AllowDBNull = false;
                 this.columnTYPEID.AllowDBNull = false;
@@ -3109,6 +3125,12 @@ namespace ThesisProject_ {
                 this.columnLANGUAGEID.AllowDBNull = false;
                 this.columnSUPERVISORID.AllowDBNull = false;
                 this.columnABSTRACT.MaxLength = 5000;
+                this.columnID.AutoIncrement = true;
+                this.columnID.AutoIncrementSeed = -1;
+                this.columnID.AutoIncrementStep = -1;
+                this.columnID.AllowDBNull = false;
+                this.columnID.ReadOnly = true;
+                this.columnID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4659,12 +4681,12 @@ namespace ThesisProject_ {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal ID {
+            public decimal ID2 {
                 get {
-                    return ((decimal)(this[this.tableTHESIS.IDColumn]));
+                    return ((decimal)(this[this.tableTHESIS.ID2Column]));
                 }
                 set {
-                    this[this.tableTHESIS.IDColumn] = value;
+                    this[this.tableTHESIS.ID2Column] = value;
                 }
             }
             
@@ -4827,6 +4849,17 @@ namespace ThesisProject_ {
                 }
                 set {
                     this[this.tableTHESIS.TITLEIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID {
+                get {
+                    return ((int)(this[this.tableTHESIS.IDColumn]));
+                }
+                set {
+                    this[this.tableTHESIS.IDColumn] = value;
                 }
             }
             
@@ -9419,7 +9452,6 @@ namespace ThesisProject_.ThesisProjectDataTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "THESIS";
-            tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("AUTHORID", "AUTHORID");
             tableMapping.ColumnMappings.Add("UNIVERSITYID", "UNIVERSITYID");
             tableMapping.ColumnMappings.Add("TYPEID", "TYPEID");
@@ -9432,6 +9464,7 @@ namespace ThesisProject_.ThesisProjectDataTableAdapters {
             tableMapping.ColumnMappings.Add("YEAR", "YEAR");
             tableMapping.ColumnMappings.Add("SUBMISSIN", "SUBMISSIN");
             tableMapping.ColumnMappings.Add("TITLEID", "TITLEID");
+            tableMapping.ColumnMappings.Add("ID", "ID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::Microsoft.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -9439,8 +9472,8 @@ namespace ThesisProject_.ThesisProjectDataTableAdapters {
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::Microsoft.Data.SqlClient.SqlParameter param = new global::Microsoft.Data.SqlClient.SqlParameter();
             param.ParameterName = "@Original_ID";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.SqlDbType = global::System.Data.SqlDbType.Decimal;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.SqlDbType = global::System.Data.SqlDbType.Int;
             param.IsNullable = true;
             param.SourceColumn = "ID";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -9623,8 +9656,8 @@ namespace ThesisProject_.ThesisProjectDataTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Microsoft.Data.SqlClient.SqlParameter();
             param.ParameterName = "@Original_ID";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.SqlDbType = global::System.Data.SqlDbType.Decimal;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.SqlDbType = global::System.Data.SqlDbType.Int;
             param.IsNullable = true;
             param.SourceColumn = "ID";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -9648,7 +9681,9 @@ namespace ThesisProject_.ThesisProjectDataTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::Microsoft.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        THESIS.*\r\nFROM            THESIS\r\nWHERE (([ID] = @Original_ID))\r\n";
+            this._commandCollection[1].CommandText = "SELECT ABSTRACT, AUTHORID, COSUPERVISORID, ID, INSTITUTEID, LANGUAGEID, NUMBEROFP" +
+                "AGE, SUBMISSIN, SUPERVISORID, TITLEID, TYPEID, UNIVERSITYID, YEAR FROM THESIS WH" +
+                "ERE (ID = @Original_ID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             global::Microsoft.Data.SqlClient.SqlParameter param = new global::Microsoft.Data.SqlClient.SqlParameter();
             param.ParameterName = "@Original_ID";
@@ -9965,8 +10000,8 @@ namespace ThesisProject_.ThesisProjectDataTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(decimal Original_ID) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_ID));
+        public virtual int Delete(int Original_ID) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10050,7 +10085,7 @@ namespace ThesisProject_.ThesisProjectDataTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int AUTHORID, int UNIVERSITYID, int TYPEID, int INSTITUTEID, int LANGUAGEID, int SUPERVISORID, global::System.Nullable<int> COSUPERVISORID, global::System.Nullable<int> NUMBEROFPAGE, string ABSTRACT, global::System.Nullable<global::System.DateTime> YEAR, global::System.Nullable<global::System.DateTime> SUBMISSIN, global::System.Nullable<int> TITLEID, decimal Original_ID) {
+        public virtual int Update(int AUTHORID, int UNIVERSITYID, int TYPEID, int INSTITUTEID, int LANGUAGEID, int SUPERVISORID, global::System.Nullable<int> COSUPERVISORID, global::System.Nullable<int> NUMBEROFPAGE, string ABSTRACT, global::System.Nullable<global::System.DateTime> YEAR, global::System.Nullable<global::System.DateTime> SUBMISSIN, global::System.Nullable<int> TITLEID, int Original_ID) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(AUTHORID));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(UNIVERSITYID));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(TYPEID));
@@ -10093,7 +10128,7 @@ namespace ThesisProject_.ThesisProjectDataTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((decimal)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
