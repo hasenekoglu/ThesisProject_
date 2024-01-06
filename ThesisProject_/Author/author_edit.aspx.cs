@@ -21,7 +21,7 @@ namespace ThesisProject_.Author
 
                 txtAuthorName.Text = authorName;
                 txtAuthorSurname.Text = authorLastName;
-                //Phone Number Operations
+            
                 txtAuthorEmail.Text = authorEmail;
 
                 
@@ -35,8 +35,7 @@ namespace ThesisProject_.Author
         {
             int id = Convert.ToInt32(Request.QueryString["id"]);
             ThesisProject_.ThesisProjectDataTableAdapters.AUTHORSTableAdapter author = new ThesisProject_.ThesisProjectDataTableAdapters.AUTHORSTableAdapter();
-            //ThesisProject_.ThesisProjectDataTableAdapters.AUTHORSTableAdapter newAuthor = new ThesisProject_.ThesisProjectDataTableAdapters.AUTHORSTableAdapter();
-            //author.AuthorUpdate(txtAuthorName.Text, txtAuthorSurname.Text, , txtAuthorEmail.Text, id);  //Phone Number Operations
+       
 
 
         }
